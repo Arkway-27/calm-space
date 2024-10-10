@@ -1,31 +1,26 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import {
   ChatHeader,
   MessagesContainer,
   MessageInput,
 } from "../components/chat";
+import { useEffect } from "react";
+import systemInstruction from "../lib/prompts/system-mental-health";
+
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const generativeAi = new GoogleGenerativeAI(GEMINI_API_KEY);
+
+const model = generativeAi.getGenerativeModel({
+  model: "gemini-1.5-flash",
+  systemInstruction: systemInstruction,
+});
 
 // Main chat component
 export default function Chat() {
-  const [messages, setMessages] = useState([
-    {
-      id: 1,
-      text: "Hi! Welcome to the chat.",
-      sender: "bot",
-    },
-    {
-      id: 2,
-      text: "Thanks! Love the new design with the teal color scheme!",
-      sender: "user",
-    },
-    {
-      id: 3,
-      text: "How can I help you today?",
-      sender: "bot",
-    },
-  ]);
-
+  const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
+  const [botReplied, setBotReplied] = useState(false);
 
   const handleSend = (e) => {
     e.preventDefault();
@@ -39,8 +34,27 @@ export default function Chat() {
         },
       ]);
       setNewMessage("");
+      setBotReplied(false);
     }
   };
+
+  useEffect(() => {
+    const getResponse = async (prompt) => {
+      const response = await model.generateContent(prompt);
+      setMessages([
+        ...messages,
+        {
+          id: messages.length + 1,
+          text: response.response.text(),
+          sender: "bot",
+        },
+      ]);
+    };
+
+    if (botReplied || messages.length == 0) return;
+    getResponse(messages[messages.length - 1].text);
+    setBotReplied(true);
+  }, [messages, botReplied]);
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center transition duration-100 ease-in-out">
