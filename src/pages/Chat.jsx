@@ -57,16 +57,14 @@ export default function Chat() {
   }, [messages, botReplied]);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center transition duration-100 ease-in-out">
-      <div className="flex flex-col h-full w-full rounded-2xl shadow-sm overflow-hidden border border-gray-200 dark:bg-neutral-900 dark:border-white/5">
-        <ChatHeader />
-        <MessagesContainer messages={messages} />
-        <MessageInput
-          newMessage={newMessage}
-          setNewMessage={setNewMessage}
-          handleSend={handleSend}
-        />
-      </div>
+    <div className="w-full h-full flex flex-col justify-center overflow-y-scroll shadow-sm border border-gray-200 dark:bg-neutral-900 dark:border-white/5 rounded-2xl transition duration-100 ease-in-out">
+      <ChatHeader />
+      <MessagesContainer messages={messages} />
+      <MessageInput
+        newMessage={newMessage}
+        setNewMessage={setNewMessage}
+        handleSend={handleSend}
+      />
     </div>
   );
 }
