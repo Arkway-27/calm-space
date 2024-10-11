@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import MeditationForm from "../components/MeditationForm";
 import MeditationCircles from "../components/MeditationCircles";
+import { AudioPlayer } from "../components/meditation";
 
 const initCircle = 110;
 
@@ -27,18 +28,18 @@ export default function Meditation() {
     setSize(initCircle);
   }
 
-
   return (
     <div>
       <div className="w-full text-center relative bottom-60">
-      <h1 className="text-3xl font-bold">Meditation</h1>
+        <h1 className="text-3xl font-bold">Meditation</h1>
       </div>
       <div className="mb-3 w-full relative left-16 h-auto flex flex-row justify-center items-center ">
-        <MeditationCircles breath={breath}/>
+        <MeditationCircles breath={breath} />
       </div>
 
-      <div className="w-full h-auto flex-row flex justify-center">
+      <div className="w-full h-auto flex justify-evenly items-center">
         <MeditationForm onSelect={handleBreathValue} />
+        <AudioPlayer />
       </div>
     </div>
   );
