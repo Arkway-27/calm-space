@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Play, Pause } from "lucide-react";
-import beachAudio from "/audio/beach.mp3";
-const audio = new Audio(beachAudio);
+
+const audio = new Audio(import.meta.env.BASE_URL + "/audio/beach.mp3");
 export default function AudioPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   useEffect(() => {
