@@ -14,7 +14,7 @@ export default function Nav() {
   const [darkTransitionFinished, setDarkTransitionFinished] = useState(false);
   const [lightTransitionFinished, setLightTransitionFinished] = useState(true);
   return (
-    <nav className="w-full h-10 px-4 flex justify-between items-center shadow-xl rounded-full bg-neutral-50 dark:bg-neutral-900 transition duration-100 ease-in-out">
+    <nav className="w-full h-14 px-4 flex justify-between items-center shadow-xl rounded-full bg-neutral-50 dark:bg-neutral-900 transition duration-100 ease-in-out">
       <span className="px-2 shrink-0 text-lg font-bold border border-teal-400 shadow-md shadow-teal-500/50 rounded-full">
         <a href="/">Calm Space</a>
       </span>
