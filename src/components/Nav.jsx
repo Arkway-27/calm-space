@@ -4,9 +4,9 @@ import { Transition, TransitionChild } from "@headlessui/react";
 import { useState } from "react";
 
 const links = [
-  { name: "Chat", href: "/chat" },
-  { name: "Meditation", href: "/meditation" },
-  { name: "Articles", href: "/articles" },
+  { name: "Chat", href: "/calm-space/chat" },
+  { name: "Meditation", href: "/calm-space/meditation" },
+  { name: "Articles", href: "/calm-space/articles" },
 ];
 
 export default function Nav() {

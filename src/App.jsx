@@ -2,26 +2,29 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home, Chat, Meditation, Articles } from "./pages";
 import { Nav } from "./components";
 
-
-
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/chat",
+      element: <Chat />,
+    },
+    {
+      path: "/meditation",
+      element: <Meditation />,
+    },
+    {
+      path: "/articles",
+      element: <Articles />,
+    },
+  ],
   {
-    path: "/",
-    element: <Home />,
+    basename: "/calm-space",
   },
-  {
-    path: "/chat",
-    element: <Chat />,
-  },
-  {
-    path: "/meditation",
-    element: <Meditation />,
-  },
-  {
-    path: "/articles",
-    element: <Articles />,
-  },
-]);
+);
 
 function App() {
   return (
