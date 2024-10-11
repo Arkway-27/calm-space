@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home, Chat, Meditation, Articles } from "./pages";
 import { Nav } from "./components";
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
