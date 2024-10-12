@@ -4,7 +4,7 @@ const ArticlesFeed = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("/data/articles.json")
+    fetch(import.meta.env.BASE_URL + "/data/articles.json")
       .then((response) => response.json())
       .then((data) => setArticles(data))
       .catch((error) => console.error("Error fetching articles:", error));
