@@ -12,7 +12,7 @@ const ArticlesFeed = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-5xl mx-auto mt-2 mb-8 text-center font-bold">
+      <h1 className="text-5xl mx-auto mt-12 mb-2 text-center font-bold py-4">
         Articles about Calm and Peace
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -1,37 +1,37 @@
 [
     {
       "id": 1,
-      "title": "Understanding and Managing Anxiety",
-      "author": "Dr. Emily Johnson",
-      "excerpt": "Anxiety is a common mental health concern. This article explores the causes of anxiety and provides practical strategies for managing symptoms and improving overall well-being.",
-      "sourceUrl": "https://www.example.com/anxiety-management"
+      "title": "Mental Self Care for Software Developers and Web Designers",
+      "author": "B.J Keeton",
+      "excerpt": "Talking about mental health can be awkward. It shouldn’t be any harder to talk about than a sinus infection or toothache, but it is. So let’s work on changing that. When you’re discussing mental health, the most important thing to remember is the keyword health.",
+      "sourceUrl": "https://www.elegantthemes.com/blog/editorial/mental-self-care-for-software-developers-and-web-designers"
     },
     {
       "id": 2,
-      "title": "The Power of Mindfulness in Daily Life",
-      "author": "Mark Thompson",
-      "excerpt": "Discover how incorporating mindfulness practices into your daily routine can reduce stress, improve focus, and enhance your overall quality of life.-----------------------------------------------------------------",
-      "sourceUrl": "https://www.example.com/mindfulness-daily-life"
+      "title": "My Mental Health Toolbelt",
+      "author": "Taylor Otwell",
+      "excerpt": "I believe programmers, especially those that work from home, are more prone to mental health issues than many other demographics. You’re locked in your office with silence and your own thoughts and that is a prime environment for lots of rumination. Sometimes rumination about things that are distressing or depressing.",
+      "sourceUrl": "https://medium.com/@taylorotwell/my-mental-health-toolbelt-9b9fdd4ae149"
     },
     {
       "id": 3,
-      "title": "Building Resilience: Bouncing Back from Setbacks",
-      "author": "Dr. Sarah Lee",
-      "excerpt": "Resilience is a crucial skill for maintaining good mental health. Learn techniques to build your resilience and cope better with life's challenges.",
-      "sourceUrl": "https://www.example.com/building-resilience"
+      "title": "Beating Burnout: A guide for supporting mental health at work",
+      "author": "Forrest Cronin",
+      "excerpt": "As of May 2019 burnout has officially been recognized by the World Health Organization (WHO) and the International Classification of Diseases (ICD-11) as an “occupational phenomenon” – with the possibility of it being proclaimed a proper disease in the future.",
+      "sourceUrl": "https://almanac.io/docs/beating-burnout-a-guide-for-supporting-mental-health-at-work-yDLKVF3uJtMdshcZG37HP7OHpAczogYX"
     },
     {
       "id": 4,
-      "title": "The Connection Between Physical Exercise and Mental Health",
-      "author": "Alex Rodriguez",
-      "excerpt": "Explore the profound impact that regular physical activity can have on your mental well-being, including reducing symptoms of depression and anxiety.",
-      "sourceUrl": "https://www.example.com/exercise-mental-health"
+      "title": "Depression at work: the role of motivation and fulfillment",
+      "author": "Bev Campling",
+      "excerpt": "Depression isn’t just a case of the blues where you feel down for a while. It’s a mental health issue, a mental illness that ranges from moderate to severe. Untreated, the burden of depression can be part of daily life, or it can come and go in endless recurring bouts. Thankfully, there are effective treatments for depression.",
+      "sourceUrl": "https://getmarlee.com/blog/depression-at-work"
     },
     {
       "id": 5,
-      "title": "Nurturing Healthy Relationships for Better Mental Health",
-      "author": "Dr. Michael Brown",
-      "excerpt": "Discover the importance of healthy relationships in maintaining good mental health and learn strategies for improving your connections with others.",
-      "sourceUrl": "https://www.example.com/relationships-mental-health"
+      "title": "Intro to Meditation for Coders",
+      "author": "Abe Dolinger",
+      "excerpt": "Maybe you’ve noticed meditation’s quietly exploding popularity. The benefits are said to be huge, and the difficulty great. There are many methods, each of its own hardcore sect, or expensive new-agey guru. The pseudoscience around it, and the hard-to-quantify results, have turned off many a rational person - maybe including you.",
+      "sourceUrl": "https://dev.to/256hz/intro-to-meditation-for-coders-1p6f"
     }
   ]
