@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "title": "Understanding and Managing Anxiety",
+      "author": "Dr. Emily Johnson",
+      "excerpt": "Anxiety is a common mental health concern. This article explores the causes of anxiety and provides practical strategies for managing symptoms and improving overall well-being.",
+      "sourceUrl": "https://www.example.com/anxiety-management"
+    },
+    {
+      "id": 2,
+      "title": "The Power of Mindfulness in Daily Life",
+      "author": "Mark Thompson",
+      "excerpt": "Discover how incorporating mindfulness practices into your daily routine can reduce stress, improve focus, and enhance your overall quality of life.-----------------------------------------------------------------",
+      "sourceUrl": "https://www.example.com/mindfulness-daily-life"
+    },
+    {
+      "id": 3,
+      "title": "Building Resilience: Bouncing Back from Setbacks",
+      "author": "Dr. Sarah Lee",
+      "excerpt": "Resilience is a crucial skill for maintaining good mental health. Learn techniques to build your resilience and cope better with life's challenges.",
+      "sourceUrl": "https://www.example.com/building-resilience"
+    },
+    {
+      "id": 4,
+      "title": "The Connection Between Physical Exercise and Mental Health",
+      "author": "Alex Rodriguez",
+      "excerpt": "Explore the profound impact that regular physical activity can have on your mental well-being, including reducing symptoms of depression and anxiety.",
+      "sourceUrl": "https://www.example.com/exercise-mental-health"
+    },
+    {
+      "id": 5,
+      "title": "Nurturing Healthy Relationships for Better Mental Health",
+      "author": "Dr. Michael Brown",
+      "excerpt": "Discover the importance of healthy relationships in maintaining good mental health and learn strategies for improving your connections with others.",
+      "sourceUrl": "https://www.example.com/relationships-mental-health"
+    }
+  ]
