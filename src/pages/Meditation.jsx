@@ -30,7 +30,7 @@ export default function Meditation() {
 
   return (
     <div>
-      <div className="w-full text-center relative bottom-60">
+      <div className="w-full text-center relative bottom-48">
         <h1 className="text-3xl font-bold">Meditation</h1>
       </div>
       <div className="mb-3 w-full relative left-16 h-auto flex flex-row justify-center items-center ">
