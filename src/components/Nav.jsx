@@ -13,6 +13,7 @@ export default function Nav() {
   const { theme, setTheme } = useTheme();
   const [darkTransitionFinished, setDarkTransitionFinished] = useState(false);
   const [lightTransitionFinished, setLightTransitionFinished] = useState(true);
+
   return (
     <nav className="w-full h-14 px-4 flex justify-between items-center shadow-xl rounded-full bg-neutral-50 dark:bg-neutral-900 transition duration-100 ease-in-out">
       <span className="px-2 shrink-0 text-lg font-bold border border-teal-400 shadow-md shadow-teal-500/50 rounded-full">
@@ -29,11 +30,13 @@ export default function Nav() {
         ))}
       </ul>
       <button
-        className={`my-3 p-1 ${theme === "dark" ? "text-white" : ""} rounded-lg transition duration-100 ease-in`}
+        className={`my-3 p-1 ${
+          theme === "dark" ? "text-white" : ""
+        } rounded-lg transition duration-100 ease-in`}
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
         <Transition
-          show={theme === "dark" && lightTransitionFinished}
+          show={lightTransitionFinished && theme === "dark"}
           beforeEnter={() => setDarkTransitionFinished(false)}
           afterLeave={() => setDarkTransitionFinished(true)}
         >
@@ -43,7 +46,12 @@ export default function Nav() {
           />
         </Transition>
         <Transition
-          show={theme === "light" && darkTransitionFinished}
+          show={
+            (darkTransitionFinished && theme === "light") ||
+            (true
+              ? darkTransitionFinished == false && theme === "light"
+              : false) //extra condition for when theme is light but darkTransitionFinished is false
+          }
           beforeEnter={() => setLightTransitionFinished(false)}
           afterLeave={() => setLightTransitionFinished(true)}
         >
