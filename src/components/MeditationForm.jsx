@@ -2,14 +2,19 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "lucide-react";
 import { useState } from "react";
 
+const menuItems = [
+  { label: "Five seconds", value: 5 },
+  { label: "Six seconds", value: 6 },
+  { label: "Seven seconds", value: 7 },
+  { label: "Eight seconds", value: 8 },
+];
 
 export default function MeditationForm({ onSelect }) {
-
   const [option, setOption] = useState("Set Time");
   return (
-    <Menu as="div" className="relative inline-block text-left w-40">
-      <div>
-        <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+    <Menu as="div" className="h-12 relative inline-block text-left w-40">
+      <div className="h-full">
+        <MenuButton className="w-full h-full bg-white px-3 py-2 flex justify-around items-center text-sm font-semibold text-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800 shadow-sm border border-gray-200 dark:bg-neutral-900 dark:border-white/5 dark:text-neutral-300 rounded-2xl transition duration-100 ease-in-out">
           {option}
           <ChevronDownIcon
             aria-hidden="true"
@@ -20,61 +25,21 @@ export default function MeditationForm({ onSelect }) {
 
       <MenuItems
         transition
-        className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+        className="absolute right-0 z-10 mt-2 w-40 h-20 origin-top-right bg-white ring-1 ring-black ring-opacity-5 focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in overflow-y-scroll text-neutral-900 shadow-sm border border-gray-200 dark:bg-neutral-900 dark:border-white/5 dark:text-neutral-300 rounded-2xl transition duration-100 ease-in-out"
       >
         <div className="py-1">
-          <MenuItem
-            onClick={() => {
-              onSelect(5);
-              setOption("Five seconds");
-            }}
-          >
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+          {menuItems.map((item) => (
+            <MenuItem
+              key={item.value}
+              onClick={() => {
+                onSelect(item.value);
+                setOption(item.label);
+              }}
+              className="block px-4 py-2 text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 "
             >
-              Five seconds
-            </a>
-          </MenuItem>
-          <MenuItem
-            onClick={() => {
-              onSelect(6);
-              setOption("Six seconds");
-            }}
-          >
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-            >
-              Six seconds
-            </a>
-          </MenuItem>
-          <MenuItem
-            onClick={() => {
-              onSelect(7);
-              setOption("Seven seconds");
-            }}
-          >
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-            >
-              Seven seconds
-            </a>
-          </MenuItem>
-          <MenuItem
-            onClick={() => {
-              onSelect(8);
-              setOption("Eight seconds");
-            }}
-          >
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-            >
-              Eight seconds
-            </a>
-          </MenuItem>
+              <span>{item.label}</span>
+            </MenuItem>
+          ))}
         </div>
       </MenuItems>
     </Menu>

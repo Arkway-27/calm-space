@@ -1,5 +1,33 @@
 import React, { useState, useEffect } from "react";
 
+const ArticleCard = ({ article }) => {
+  return (
+    <div className="h-96 p-6 bg-white overflow-hidden flex flex-col justify-between shadow-sm border border-gray-200 dark:bg-neutral-900 dark:border-white/5 rounded-2xl transition duration-100 ease-in-out">
+      <div className="h-3/4 flex flex-col gap-4">
+        <div className="h-18 flex-shrink-0 flex flex-col justify-around items-start">
+          <h3 className="w-full text-xl font-semibold truncate text-blue-800 dark:text-blue-600">
+            {article.title}
+          </h3>
+          <p className="text-sm text-teal-600 dark:text-teal-400">
+            {article.author}
+          </p>
+        </div>
+        <p className="h-full text-gray-700 dark:text-gray-300">
+          {article.excerpt}
+        </p>
+      </div>
+      <a
+        href={article.sourceUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full px-4 py-2 bg-teal-600 text-white text-center rounded-xl hover:bg-teal-300 hover:text-black transition duration-300 "
+      >
+        Read Full Article
+      </a>
+    </div>
+  );
+};
+
 const ArticlesFeed = () => {
   const [articles, setArticles] = useState([]);
 
@@ -11,34 +39,10 @@ const ArticlesFeed = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-5xl mx-auto mt-12 mb-2 text-center font-bold py-4">
-        Articles about Calm and Peace
-      </h1>
+    <div className="mx-auto px-4 py-8 overflow-y-scroll">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {articles.map((article) => (
-          <div
-            key={article.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
-          >
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-blue-800 mb-2">
-                {article.title}
-              </h3>
-              <p className="text-sm text-red-600 mb-4">{article.author}</p>
-              <p className="text-gray-700 mb-4">{article.excerpt}</p>
-            </div>
-            <div className="px-6 py-4 bg-gray-50">
-              <a
-                href={article.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full px-4 py-2 bg-[#EE4865] text-white text-center rounded hover:bg-blue-600 transition duration-300 "
-              >
-                Read Full Article
-              </a>
-            </div>
-          </div>
+          <ArticleCard key={article.id} article={article} />
         ))}
       </div>
     </div>
