@@ -35,7 +35,7 @@ export default function Nav() {
     <>
       <nav className="w-full h-14 px-4 flex justify-between items-center shadow-xl rounded-full bg-neutral-50 dark:bg-neutral-900 transition duration-100 ease-in-out">
         <span className="px-2 shrink-0 text-lg font-bold border border-teal-400 shadow-md shadow-teal-500/50 rounded-full">
-          <a href="/">Calm Space</a>
+          <a href="/calm-space">Calm Space</a>
         </span>
 
         {/* Desktop Navigation */}
@@ -111,7 +111,7 @@ export default function Nav() {
         <div className="fixed top-0 right-0 w-64 h-full bg-neutral-50 dark:bg-neutral-900 shadow-lg p-4 flex flex-col z-50">
           <div className="flex justify-between items-center mb-4">
             <span className="text-lg font-bold">
-              <a href="/">Calm Space</a>
+              <a href="/calm-space">Calm Space</a>
             </span>
             <button
               className="focus:outline-none"
