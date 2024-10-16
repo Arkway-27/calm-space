@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import systemInstruction from "../lib/prompts/system-mental-health";
 
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+console.log(GEMINI_API_KEY);
 const generativeAi = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 const model = generativeAi.getGenerativeModel({
